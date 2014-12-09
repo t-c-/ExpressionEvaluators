@@ -1,0 +1,133 @@
+
+These Examples show some basic usages.  The usage is designed to be similar to C & Lisp in terms of syntax.  Expressions result in numbers or boolean values (0 or 1).
+
+User input is indicated by the '?', and response is indicated by '='.
+?: <user inputted expression >
+=: <result of expression>
+
+
+
+================  C Style Expression  ================  
+
+Some Sample usage History:
+
+
+>: Using 'C' Style Expressions.
+
+______ Variables _____
+
+?: a=1
+=: 1
+?: b=2
+=: 2
+?: c=3
+=: 3
+?: d=(e=10)*3
+=: 30
+?: e
+=: 10
+?: h=i=j=k=1
+=: 1
+?: h+i+j+k
+=: 4
+?: h=i=j=k=2
+=: 2
+?: h+i+j+k
+=: 8
+
+
+_____ Nesting _____
+
+?: a + ((b /c) - (d -a)) / b
+=: -13.16667
+?: ((a*b) / (c -d +e)) * (a-b)
+=: 0.1176471
+
+_____ Functions _____
+
+?: cos(rad(11.2) + pi)
+=: -0.9809552
+?: rnd()
+=: 0.6649286
+?: rnd(10,20)
+=: 14.13221
+?: ceil(1.4)
+=: 2
+?: floor(1.4)
+=: 1
+?: pow(2, 2)
+=: 4
+
+______ Logic _____
+
+?: a==b
+=: 0
+?: a<b
+=: 1
+?: a < b & c > a
+=: 1
+?: a < b & c < a
+=: 0
+?: a < b | c < a
+=: 1
+?: a < b & !(c < a)
+=: 1
+?: !(a < b & c > a)
+=: 0
+
+
+
+
+
+================  Lisp Style Expressions ================  
+
+Some Sample usage History:
+
+
+
+:: Using 'Lisp' Style Expressions.
+
+______ Variables _____
+
+?: (set a 1 b 2 c 3)
+=: 3
+?: (set d (* (set e 10) 3))
+=: 30
+?: e
+=: 10
+?: (set h  (set i (set j (set k 2))))
+=: 2
+?: (+ h i j k)
+=: 8
+
+
+
+_____ Nesting _____
+
+?: (/ (+ a (- (/ b c) (- d a))) b)
+=: -13.66667
+?: (* (/ (* a b) (+ c (* -1 d) e)) (- a b))
+=: 0.1176471
+
+
+______ Logic _____
+
+?: (eq a b)
+=: 0
+?: (< a b)
+=: 1
+?: (and (< a b) (> c a))
+=: 1
+?: (and (< a b) (< c a))
+=: 0
+?: (or (< a b) (< c a))
+=: 1
+?: (and (< a b) (not (< c a)))
+=: 1
+?: (not (and (< a b) (> c a)))
+=: 0
+
+
+
+
+
